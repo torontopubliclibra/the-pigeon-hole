@@ -1,0 +1,230 @@
+/* remove default styling */
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* font import */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap'); */
+
+/* default font size */
+html {
+    font-size: 62.5%;
+}
+
+/* default font family, weight, and color */
+header, body, footer {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color: #fff
+}
+
+/*  body background */
+body {
+    background-color: #5d6464;
+    background-size: 10px 10px;
+    background-image: repeating-linear-gradient(45deg, #7BA0CF 0, #ACCBF4 0.5px, #7BA0CF 0, #ACCBF4 50%);
+}
+
+/* link text colour and weight */
+a {
+    color: #fff;
+    font-weight: 400;
+}
+
+/* header and image results sections background and border */
+header, #image-results {
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 0.4rem solid #fff;
+    border-radius: 15px;
+}
+
+/* header section padding and margin */
+header {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* city selector and footer section background and border */
+#city-selection, footer {
+    background: #5d6464c0;
+    border: 0.4rem solid #000;
+    border-radius: 15px;
+}
+
+/* wrapper width and margins */
+.wrapper {
+    max-width: 600px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* title padding and text */
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* city selector section padding, margins, and text */
+#city-selection {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 0.05rem;
+}
+
+/* city selector label text and colour */
+#cities-label {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+/* city selector dropdown width and margins */
+#cities {
+    width: 80%;
+    margin: 0.75rem;
+}
+
+/* button and dropdown background, colour, border, size, padding, and text */
+#cities, button {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 5px;
+    height: 2rem;
+    padding: 0.25rem;
+    letter-spacing: 0.025rem;
+    font-size: 1.1rem;
+}
+
+/* button margins */
+button {
+    margin: 0.25rem;
+}
+
+/* pointer cursor on hover of dropdown or buttons */
+#cities:hover, button:enabled:hover {
+    cursor: pointer;
+}
+
+/* submit button width */
+#submit {
+    width: 5rem;
+}
+
+/* random button width */
+#random {
+    width: 5.5rem;
+}
+
+/* button click animation */
+button:enabled:active {
+    transform: scale(0.95);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* transparent background for disabled button */
+button:disabled {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* dropdown select arrow */
+select {
+    /* remove default for firefox */
+    -moz-appearance: none;
+    /* remove default for chrome */
+    -webkit-appearance: none;
+    /* replace icon */
+    background: url("assets/down-arrow.png") no-repeat right #fff;
+    background-size: 30px;
+  }
+
+/* image results text and size */
+#image-results {
+    text-align: center;
+    width: 100%;
+    height: 400px;
+}
+
+/* image container center with flex */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+/* city name text, and padding */
+h3 {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* image effects animation (fade in and zoom out from center) */
+@keyframes fadeInZoomOut {
+    from {
+        width: 0px;
+        height: 0px;
+        opacity: 0%;
+        transform: translate(0px, 150px);
+    }
+    to {
+        width: 300px;
+        height: 300px;
+        opacity: 100%;
+        transform: translate(0px, 0px);
+    }
+  }
+
+/* pigeon image sizing, border, make image a circle, make image cover area, add animation */
+.pigeon-image {
+    display: block;
+    width: 300px;
+    height: 300px;
+    border: 5px solid #000;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: 0.75s ease-in fadeInZoomOut;
+}
+
+/* footer margins, text */
+footer {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 0.025rem;
+    line-height: 1.75rem;
+}
+
+/* re-styling for mobile (shrink header, alter sizing on city selector, change size of selector text and city label text, resize image results section) */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+        padding: 1rem;
+    }
+    #cities {
+        width: 90%;
+    }
+    #cities-label {
+        font-size: 1.1rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    #image-results {
+        height: 425px;
+    }
+}
