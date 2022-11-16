@@ -178,18 +178,18 @@ h3 {
     from {
         width: 0px;
         height: 0px;
-        opacity: 0%;
+        opacity: 0;
         transform: translate(0px, 150px);
     }
     to {
         width: 300px;
         height: 300px;
-        opacity: 100%;
+        opacity: 1;
         transform: translate(0px, 0px);
     }
   }
 
-/* pigeon image sizing, border, make image a circle, make image cover area, add animation */
+/* pigeon image sizing, border, make image a circle, make image cover area, add animation, hide alt text for loading image */
 .pigeon-image {
     display: block;
     width: 300px;
@@ -198,6 +198,10 @@ h3 {
     border-radius: 50%;
     object-fit: cover;
     animation: 0.75s ease-in fadeInZoomOut;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0);
 }
 
 /* footer margins, text */

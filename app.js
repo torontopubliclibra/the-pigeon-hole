@@ -30,20 +30,25 @@ app.displayPhoto = function(data){
     const photoLink = `https://www.flickr.com/photos/${pigeon.owner}/${pigeon.id}/`;
 
     // set HTML to add to page using URLs and title from pigeon object
-    const photoHTML = `<h3 class="city-label">${app.selectedCity}</h3><div class="image-container"><a href="${photoLink}" target="_blank"><img src="${photoURL}" alt="${pigeon.title}" title="${pigeon.title}" class="pigeon-image"></a></div>`;
+    const photoHTML = `<h3 class="city-label">${app.selectedCity}</h3><div class="image-container"><a href="${photoLink}" target="_blank"><img src="${photoURL}" alt="${pigeon.title}" class="pigeon-image"></a></div>`;
 
     // set image results section
     app.imageResults = $(`#image-results`);
 
-    // add HTML to the image results section
-    app.imageResults.html(photoHTML);
+    // delay image for 0.2 seconds
+    setTimeout(() => {
 
-    // reset city selection when image appears
-    $(`#cities`).val(``);
-    app.selectedCity = ``;
+        // add HTML to the image results section
+        app.imageResults.html(photoHTML);
 
-    // re-enable random button when image appears
-    $(`#random`).attr(`disabled`, false);
+        // reset city selection when image appears
+        $(`#cities`).val(``);
+        app.selectedCity = ``;
+
+        // re-enable random button when image appears
+        $(`#random`).attr(`disabled`, false);
+
+    }, 200)
 };
 
 // initialize the app
