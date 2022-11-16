@@ -191,13 +191,14 @@ h3 {
 
 /* pigeon image sizing, border, make image a circle, make image cover area, add animation, hide alt text for loading image */
 .pigeon-image {
+    opacity: 1;
     display: block;
     width: 300px;
     height: 300px;
     border: 5px solid #000;
     border-radius: 50%;
     object-fit: cover;
-    animation: 0.75s ease-in fadeInZoomOut;
+    animation: 1s ease-in fadeInZoomOut;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;

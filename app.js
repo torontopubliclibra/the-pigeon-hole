@@ -14,7 +14,7 @@ app.getRandomElement = function(array){
 };
 
 // cities array to randomize
-app.cities = [`toronto`, `vancouver`, `new york city`, `chicago`, `boston`, `washington, d.c.`, `london`, `glasgow`, `melbourne`, `paris`, `amsterdam`, `stockholm`, `venice`, `mumbai`, `cairo`];
+app.cities = [`Toronto`, `Vancouver`, `New York City`, `Chicago`, `Boston`, `Washington, D.C.`, `London`, `Glasgow`, `Melbourne`, `Paris`, `Amsterdam`, `Stockholm`, `Venice`, `Mumbai`, `Cairo`];
 
 // display photos function using data from json API call
 app.displayPhoto = function(data){
@@ -28,9 +28,12 @@ app.displayPhoto = function(data){
     // stitch info into URLs using photo ID, server, secret, and owner from pigeon object
     const photoURL = `https://live.staticflickr.com/${pigeon.server}/${pigeon.id}_${pigeon.secret}.jpg`;
     const photoLink = `https://www.flickr.com/photos/${pigeon.owner}/${pigeon.id}/`;
+    const photoTitle = `${app.selectedCity} pigeon`;
+
+    console.log(pigeon);
 
     // set HTML to add to page using URLs and title from pigeon object
-    const photoHTML = `<h3 class="city-label">${app.selectedCity}</h3><div class="image-container"><a href="${photoLink}" target="_blank"><img src="${photoURL}" alt="${pigeon.title}" class="pigeon-image"></a></div>`;
+    const photoHTML = `<h3 class="city-label">${app.selectedCity}</h3><div class="image-container"><a href="${photoLink}" target="_blank"><img src="${photoURL}" alt="${photoTitle}" title="${photoTitle}" class="pigeon-image"></a></div>`;
 
     // set image results section
     app.imageResults = $(`#image-results`);
