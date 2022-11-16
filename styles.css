@@ -209,6 +209,8 @@ h3 {
 footer {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     text-align: center;
     letter-spacing: 0.025rem;
     line-height: 1.75rem;
