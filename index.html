@@ -14,33 +14,15 @@
 	<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
-	<!-- begin wrapper -->
 	<div class="wrapper">
         <!-- header -->
-        <header>
-            <h1>The Pigeon Hole</h1>
-        </header>
+        <header><h1>The Pigeon Hole</h1></header>
         <!-- city selector -->
 		<section id="city-selection">
+			<!-- city selector label -->
 			<label for="cities" id="cities-label">Where would you like to go?</label>
-			<select id="cities" name="cities" title="City selector">
-				<option disabled selected value="">Select a city</option>
-				<option value="Toronto">Toronto</option>
-				<option value="Vancouver">Vancouver</option>
-				<option value="New York City">New York City</option>
-				<option value="Chicago">Chicago</option>
-				<option value="Boston">Boston</option>
-				<option value="Washington, D.C.">Washington, D.C.</option>
-				<option value="London">London</option>
-				<option value="Glasgow">Glasgow</option>
-				<option value="Melbourne">Melbourne</option>
-				<option value="Paris">Paris</option>
-				<option value="Amsterdam">Amsterdam</option>
-				<option value="Stockholm">Stockholm</option>
-				<option value="Venice">Venice</option>
-				<option value="Mumbai">Mumbai</option>
-				<option value="Cairo">Cairo</option>
-			</select>
+			<!-- city selector (rendered by jquery) -->
+			<select id="cities" name="cities" title="City selector"></select>
 			<!-- submit and random buttons -->
 			<div class="button-container">
 				<button id="submit" title="Submit" disabled>Submit</button>
@@ -56,7 +38,6 @@
 		<footer>
 			<p>Photos sourced from the <a href="https://www.flickr.com/services/api/" title="Flickr API Documentation" target="_blank" rel="norefferer">Flickr API</a>.<br>The app was built by <a href="https://danateagle.com" title="Dana Teagle website" target="_blank" rel="norefferer">Dana Teagle</a> at <a href="https://junocollege.com/" title="Juno College website" target="_blank" rel="norefferer">Juno College</a> using <a href="https://jquery.com/" rel="norefferer">jQuery</a>.</p>
 		</footer>
-	<!-- end wrapper -->
 	</div>
 	<!-- javascript links -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
