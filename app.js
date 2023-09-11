@@ -1,18 +1,22 @@
 // app object
 let app = {
+    // api details
     api: {
         key: `ba29e2524c03fb467cf6af47fca859df`,
         url: ``,
         query: ``,
         limit: 10,
     },
+    // queried elements
     elements: {
         cities: $(`#cities`),
         imageResults: $(`#image-results`),
         submit: $(`#submit`),
         random: $(`#random`)
     },
+    // app data
     data: {
+        // cities array
         cities: [
             `Toronto`,
             `Vancouver`,
@@ -30,25 +34,32 @@ let app = {
             `Mumbai`,
             `Cairo`
         ],
+        // empty city selection
         selection: '',
+        // empty photos array
         photos: [],
+        // empty photo object
         photo: {},
     },
+    // app functioons
     functions: {
+        // random selection from array
         randomFromArray: (array) => {
             let x = Math.floor(Math.random() * array.length);
             return array[x];
         },
+        // city selector
         cities: () => {
             // establish select options array with default option
             let cityOptions = [`<option disabled selected value="">Select a city</option>`]
-            // for each city, push an option to the array
+            // for each city in the app data, push an option to the array
             app.data.cities.forEach((city) => {
                 cityOptions.push(`<option value="${city}">${city}</option>`)
             })
-            // stitch together options and add to city selector
+            // stitch together options and place inside city selector
             app.elements.cities.html(cityOptions.reduce((accumulator, option) => {return accumulator + option}));
         },
+        // photo display
         displayPhoto: (photos) => {
             // randomize photo from photos array
             let randomPhoto = app.functions.randomFromArray(photos);
@@ -83,6 +94,7 @@ let app = {
                 app.elements.random.attr(`disabled`, false);
             }, 200)
         },
+        // flickr api call
         apiCall: (button) => {
             // disable buttons until photo is displayed
             app.elements.random.attr(`disabled`, true);
@@ -101,7 +113,7 @@ let app = {
                 // set selection to new random city
                 app.data.selection = randomCity;
             }
-            // set API search query using city value
+            // set API search query using selected city value
             app.api.query = {text: `pigeon ${app.data.selection}`};
             // run API call, save data as photos array, and run display photo function with the array
             $.getJSON(app.api.url, app.api.query, (data) => {
@@ -122,7 +134,7 @@ let app = {
             app.elements.submit.attr(`disabled`, false);
         });
     },
-    // initialize function
+    // app initializion
     init: () => {
         // reset city selection
         app.data.selection = ``;
