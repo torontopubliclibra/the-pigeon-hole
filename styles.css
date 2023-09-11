@@ -10,152 +10,127 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 /* font import */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
 
-/* default font size */
-html {
-    font-size: 62.5%;
-}
-
-/* default font family, weight, and color */
-header, body, footer {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    color: #fff
+/* typography */
+header, body, footer, button, select {
+    font-family: 'Barlow', sans-serif;
+    text-transform: lowercase;
+    color: #000;
 }
 
 /*  body background */
 body {
-    background-color: #5d6464;
+    background-color: #fff;
     background-size: 10px 10px;
-    background-image: repeating-linear-gradient(45deg, #7BA0CF 0, #ACCBF4 0.5px, #7BA0CF 0, #ACCBF4 50%);
+    background-image: repeating-linear-gradient(45deg, #7BA0CF 0, #ACCBF4 0, #7BA0CF 0, #ACCBF4 50%);
 }
 
-/* link text colour and weight */
+/* links */
 a {
-    color: #fff;
+    color: #000;
     font-weight: 400;
 }
 
-/* header and image results sections background and border */
-header, #image-results {
-    background-color: rgba(0, 0, 0, 0.75);
-    border: 0.4rem solid #fff;
-    border-radius: 15px;
+/* header and footer sections */
+header, footer {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #000;
+    margin: 0;
 }
-
-/* header section padding and margin */
 header {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    border-bottom: 6px solid #000;
+    padding: 25px 0;
+}
+footer {
+    border-top: 6px solid #000;
+    p {
+        font-size: 20px;
+        text-align: center;
+        margin: 0;
+        padding: 35px;
+    }
 }
 
-/* city selector and footer section background and border */
-#city-selection, footer {
-    background: #5d6464c0;
-    border: 0.4rem solid #000;
-    border-radius: 15px;
+/* main section */
+main {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 50px 0;
 }
 
-/* wrapper width and margins */
-.wrapper {
-    max-width: 600px;
-    width: 85%;
-    margin: 0 auto;
-}
-
-/* title padding and text */
+/* headings */
 h1 {
-    font-size: 3rem;
+    font-size: 100px;
     font-weight: 400;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    font-size: 25px;
     text-align: center;
 }
 
-/* city selector section padding, margins, and text */
+/* city selector section */
 #city-selection {
-    padding: 1.5rem;
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 25px;
     text-align: center;
-    letter-spacing: 0.05rem;
 }
 
-/* city selector label text and colour */
-#cities-label {
-    font-size: 1.3rem;
-    font-weight: 400;
-}
-
-/* city selector dropdown width and margins */
-#cities {
-    width: 80%;
-    margin: 0.75rem;
-}
-
-/* button and dropdown background, colour, border, size, padding, and text */
+/* dropdown and buttons */
 #cities, button {
     background-color: #fff;
     color: #000;
-    border: 2px solid #000;
+    font-size: 20px;
+    line-height: 20px;
+    height: 45px;
+    border: 3px solid #000;
     border-radius: 5px;
-    height: 2rem;
-    padding: 0.25rem;
-    letter-spacing: 0.025rem;
-    font-size: 1.1rem;
+    padding: 10px 15px;
 }
-
-/* button margins */
+#cities {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
 button {
-    margin: 0.25rem;
+    margin: 5px;
 }
-
-/* pointer cursor on hover of dropdown or buttons */
 #cities:hover, button:enabled:hover {
     cursor: pointer;
 }
-
-/* submit button width */
-#submit {
-    width: 5rem;
-}
-
-/* random button width */
-#random {
-    width: 5.5rem;
-}
-
-/* button click animation */
 button:enabled:active {
     transform: scale(0.95);
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.5);
-    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
 }
-
-/* transparent background for disabled button */
 button:disabled {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 /* dropdown select arrow */
 select {
-    /* remove default for firefox */
     -moz-appearance: none;
-    /* remove default for chrome */
     -webkit-appearance: none;
-    /* replace icon */
     background: url("assets/down-arrow.png") no-repeat right #fff;
-    background-size: 30px;
-  }
+    background-size: 25px;
+    background-position-x: 98%;
+    background-position-y: 60%;
+}
 
-/* image results text and size */
+/* image section */
 #image-results {
     text-align: center;
     width: 100%;
-    height: 400px;
+    height: 100%;
 }
 
-/* image container center with flex */
+/* image container */
 .image-container {
     display: flex;
     justify-content: center;
@@ -163,75 +138,106 @@ select {
     vertical-align: middle;
 }
 
-/* city name text, and padding */
+/* city name text */
 h3 {
+    font-size: 25px;
+    width: 400px;
+    line-height: 30px;
+    height: 60px;
+    margin: 25px auto 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 5px;
     display: block;
     text-transform: uppercase;
-    font-weight: 300;
-    letter-spacing: 0.05rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    margin-bottom: 0;
 }
 
-/* image effects animation (fade in and zoom out from center) */
+/* image animation */
 @keyframes fadeInZoomOut {
     from {
-        width: 0px;
-        height: 0px;
         opacity: 0;
-        transform: translate(0px, 150px);
+        transform: scale(0);
     }
     to {
-        width: 300px;
-        height: 300px;
         opacity: 1;
-        transform: translate(0px, 0px);
+        transform: scale(1);
     }
   }
 
-/* pigeon image sizing, border, make image a circle, make image cover area, add animation, hide alt text for loading image */
+/* image */
 .pigeon-image {
     opacity: 1;
     display: block;
-    width: 300px;
-    height: 300px;
-    border: 5px solid #000;
+    aspect-ratio: 1/1;
+    max-width: 350px;
+    min-height: 350px;
+    width: 100%;
+    border: 12px solid rgba(0, 0, 0, 0.8);
     border-radius: 50%;
     object-fit: cover;
     animation: 1s ease-in fadeInZoomOut;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-    color: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0.8);
 }
 
-/* footer margins, text */
-footer {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    text-align: center;
-    letter-spacing: 0.025rem;
-    line-height: 1.75rem;
+.default {
+    object-fit: contain;
 }
 
-/* re-styling for mobile (shrink header, alter sizing on city selector, change size of selector text and city label text, resize image results section) */
+/* responsive to mobile */
 @media only screen and (max-width: 768px) {
+
+    /* header section */
+    header {
+        padding: 40px 20px;
+    }
+
+    /* main section */
+    main {
+        position: relative;
+        min-height: 675px;
+    }
+
+    /* headings */
     h1 {
-        font-size: 1.8rem;
-        padding: 1rem;
+        font-size: 55px;
+        font-weight: 400;
+        text-align: center;
+        margin: 0;
+        padding: 0;
     }
-    #cities {
-        width: 90%;
+    h2 {
+        font-size: 20px;
+        text-align: center;
+        max-width: 90%;
+        margin: 20px auto 0 auto;
     }
-    #cities-label {
-        font-size: 1.1rem;
+
+    /* dropdown and buttons */
+    #cities, button {
+        font-size: 18px;
     }
+
+    /* city label */
     h3 {
-        font-size: 1.3rem;
+        position: absolute;
+        bottom: 50px;
+        font-size: 20px;
+        width: 75%;
+        margin: auto 50px;
     }
-    #image-results {
-        height: 425px;
+
+    /* image */
+    .pigeon-image {
+        margin: 0 auto;
+    }
+
+    /* footer section */
+    footer p {
+        font-size: 18px;
     }
 }
