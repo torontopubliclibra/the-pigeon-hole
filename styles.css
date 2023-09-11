@@ -109,7 +109,7 @@ button:enabled:active {
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.6);
     background-color: rgba(255, 255, 255, 0.6);
 }
-button:disabled {
+button:disabled, #cities:disabled {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -152,6 +152,11 @@ h3 {
     display: block;
     text-transform: uppercase;
     margin-bottom: 0;
+}
+
+.error {
+    font-size: 20px;
+    height: 90px;
 }
 
 /* image animation */
@@ -199,7 +204,7 @@ h3 {
     /* main section */
     main {
         position: relative;
-        min-height: 675px;
+        min-height: 700px;
     }
 
     /* headings */
@@ -229,6 +234,12 @@ h3 {
         font-size: 20px;
         width: 75%;
         margin: auto 50px;
+    }
+
+    /* error text */
+    .error {
+        font-size: 15px;
+        height: 85px;
     }
 
     /* image */

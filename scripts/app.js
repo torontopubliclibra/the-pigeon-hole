@@ -112,6 +112,29 @@ let app = {
             }, 200)
         },
 
+        // photo display function
+        errorPhoto: () => {
+
+            // when no data can be retrieved establish error image HTML
+            let photoHTML = `
+                <div id="image-results">
+                    <div class="image-container">
+                        <img src="assets/pigeon-default.svg" alt="A silhouette of a pigeon" class="pigeon-image default">
+                    </div>
+                    <h3 class="error">Error! Could not retrieve pigeons!<br/>Please try again later</h3>
+                </div>
+            `;
+
+            // add HTML to the image results section
+            app.elements.imageResults.html(photoHTML);
+
+            // empty the city select value and disable the buttons
+            app.elements.cities.val(``);
+            app.elements.cities.attr(`disabled`, true);
+            app.elements.submit.attr(`disabled`, true);
+            app.elements.random.attr(`disabled`, true);
+        },
+
         // flickr api call
         apiCall: (button) => {
 
@@ -142,11 +165,28 @@ let app = {
             // set API search query using selected city value
             app.api.query = {text: `pigeon ${app.data.selection}`};
 
-            // run API call, save data as photos array, and run display photo function with the array
-            $.getJSON(app.api.url, app.api.query, (data) => {
-                app.data.photos = data.photos.photo;
-                app.functions.displayPhoto(app.data.photos);
-            });
+            // // run API call, save data as photos array, and run display photo function with the array
+            // $.getJSON(app.api.url, app.api.query, (data) => {
+            //     app.data.photos = data.photos.photo;
+            //     app.functions.displayPhoto(app.data.photos);
+            // })
+            // .fail(() => {
+            //     app.functions.errorPhoto;
+            //   })
+
+            $.ajax({
+                url: app.api.url,
+                data: app.api.query
+            }).done((data) => {
+                if (data.stat === "ok") {
+                    app.data.photos = data.photos.photo;
+                    app.functions.displayPhoto(app.data.photos);
+                } else {
+                    app.functions.errorPhoto();
+                }
+            }).fail(() => {
+                app.functions.errorPhoto();
+            })
         }
     },
 
