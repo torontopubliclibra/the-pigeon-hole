@@ -24,22 +24,22 @@ let app = {
         cities: [
             `Toronto`,
             `Halifax`,
-            `Vancouver`,
             `New York City`,
             `Chicago`,
             `Boston`,
-            `Washington, D.C.`,
+            `Vancouver`,
             `Seattle`,
-            `London`,
+            `San Francisco`,
+            `Stockholm`,
             `Glasgow`,
-            `Melbourne`,
+            `London`,
             `Paris`,
             `Berlin`,
-            `Amsterdam`,
-            `Stockholm`,
             `Venice`,
-            `Mumbai`,
-            `Cairo`
+            `Rome`,
+            `Amsterdam`,
+            `Melbourne`,
+            `Mumbai`
         ],
 
         // empty city selection
