@@ -22,24 +22,24 @@ let app = {
 
         // cities array
         cities: [
-            `Toronto`,
-            `Halifax`,
-            `New York City`,
-            `Chicago`,
-            `Boston`,
-            `Vancouver`,
-            `Seattle`,
-            `San Francisco`,
-            `Stockholm`,
-            `Glasgow`,
-            `London`,
-            `Paris`,
-            `Berlin`,
-            `Venice`,
-            `Rome`,
-            `Amsterdam`,
-            `Melbourne`,
-            `Mumbai`
+            `toronto`,
+            `halifax`,
+            `new york city`,
+            `chicago`,
+            `boston`,
+            `vancouver`,
+            `seattle`,
+            `san francisco`,
+            `stockholm`,
+            `glasgow`,
+            `london`,
+            `paris`,
+            `berlin`,
+            `venice`,
+            `rome`,
+            `amsterdam`,
+            `melbourne`,
+            `mumbai`
         ],
 
         // empty city selection
@@ -64,7 +64,7 @@ let app = {
         // city selector render
         cities: () => {
             // establish select options array with default option
-            let cityOptions = [`<option disabled selected value="">Select city</option>`]
+            let cityOptions = [`<option disabled selected value="">select a city</option>`]
             // for each city in the app data, push an option to the array
             app.data.cities.forEach((city) => {
                 cityOptions.push(`<option value="${city}">${city}</option>`)
