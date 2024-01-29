@@ -67,6 +67,7 @@ h2 {
 h3 {
   font-size: 1.25rem;
   letter-spacing: 0.3px;
+  line-height: 2;
 
   /* responsive to tablet */
   @media only screen and (max-width: $tablet) {

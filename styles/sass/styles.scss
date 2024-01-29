@@ -106,13 +106,13 @@ button {
 }
 
 button:disabled, #cities:disabled {
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba($white, 0.5);
 }
 
 select {
     -moz-appearance: none;
     -webkit-appearance: none;
-    background: url("/assets/down-arrow.png") no-repeat right rgba(255, 255, 255, 0.75);
+    background: url("/assets/down-arrow.png") no-repeat right rgba($white, 0.75);
     background-size: 30px;
     background-position-x: 98%;
     background-position-y: 45%;
@@ -134,7 +134,7 @@ select {
 h3 {
     width: 600px;
     margin: 25px auto 0 auto;
-    padding: 10px 15px;
+    padding: 5px 15px;
     background-color: $white;
     border: 3px solid $black;
     border-radius: 5px;
