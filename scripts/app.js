@@ -121,7 +121,7 @@ let app = {
                     <div class="image-container">
                         <img src="assets/pigeon-default.svg" alt="A silhouette of a pigeon" class="pigeon-image default">
                     </div>
-                    <h3 class="error">Error! Could not retrieve pigeons!<br/>Please try again later</h3>
+                    <h3 class="error">Error! Could not retrieve pigeons!</h3>
                 </div>
             `;
 

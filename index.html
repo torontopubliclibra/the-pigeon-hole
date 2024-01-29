@@ -2,21 +2,37 @@
 <html lang="en">
 <head>
 
-	<!-- metadata -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="The Pigeon Hole"/>
 
-	<!-- page title and favicon -->
+    <!-- title, description, and browser metadata -->
     <title>the pigeon hole</title>
+    <meta name="title" content="the pigeon hole" />
+    <meta property="og:title" content="the pigeon hole" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="theme-color" content="#7BA0CF"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://the-pigeon-hole.netlify.app/" />
+    <meta name="description" content="A window into the lives of pigeons around the world." />
+    <meta property="og:description" content="A window into the lives of pigeons around the world." />
+    <meta name="author" content="Dana Rosamund Teagle" />
+
+	<!-- favicon -->
 	<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
-	<!-- style and font imports -->
-	<link rel="stylesheet" href="./styles.css" type="text/css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&display=swap" rel="stylesheet"> 
+	<!-- preloaded typeface -->
+	<link rel="preload" href="./fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+
+	<!-- preloaded image and icon -->
+	<link rel="preload" href="./assets/pigeon-default.svg" as="image" type="image/svg+xml" />
+	<link rel="preload" href="./assets/down-arrow.png" as="image" />
+
+	<!-- preloaded scripts -->
+	<link rel="preload" href="./scripts/jquery-3.7.0.min.js" as="script" />
+	<link rel="preload" href="./scripts/app.js" as="script" />
+
+    <!-- style import -->
+    <link rel="stylesheet" href="./styles/styles.css"/>
 
 </head>
 <body>
@@ -25,10 +41,7 @@
 	<header>
 		<h1>The Pigeon Hole</h1>
 		<h2>A window into the lives of pigeons around the world</h2>
-	</header>
 
-	<!-- main section -->
-	<main>
 		<div id="city-selection">
 
 			<!-- city selector (rendered by jquery) -->
@@ -41,6 +54,10 @@
 			</div>
 
 		</div>
+	</header>
+
+	<!-- main section -->
+	<main>
 
 		<div id="image-results">
 
@@ -61,7 +78,8 @@
 	<footer>
 		<p>
 			The application was built by <a href="https://danateagle.com" title="Dana Teagle's website" target="_blank" rel="norefferer">Dana Teagle</a> using HTML, CSS, and jQuery. See the source code <a href="https://github.com/torontopubliclibra/the-pigeon-hole" title="The Pigeon Hole on Github" target="_blank" rel="norefferer">here</a>.
-			<br/><br/>
+		</p>
+		<p>
 			Photos are sourced using the <a href="https://www.flickr.com/services/api/" title="Flickr API docs" target="_blank" rel="norefferer">Flickr API</a>. No copyright infringement is intended. Feed your local birds.
 		</p>
 	</footer>

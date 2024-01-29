@@ -1,0 +1,85 @@
+// import variables
+@use "variables" as *;
+
+// font import
+@font-face {
+  font-family: "Josefin Sans";
+  src: url(/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf) format("truetype");
+  font-display: swap;
+}
+
+* {
+  font-size: 18px;
+}
+
+body, header, footer, button, select, a {
+  text-transform: lowercase;
+  color: $black;
+}
+
+a {
+  /* responsive to tablet */
+  @media only screen and (max-width: $tablet) {
+    color: $color2;
+  }
+}
+
+// default typography
+body, button, input, select {
+  font-family: "Josefin Sans", sans-serif;
+  font-display: swap;
+  font-weight: 400;
+  line-height: 1.6;
+  text-transform: lowercase;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.25rem;
+  margin: 0;
+  padding: 0;
+
+  /* responsive to tablet */
+  @media only screen and (max-width: $tablet) {
+    font-size: 2.75rem;
+  }
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-style: italic;
+
+  /* responsive to tablet */
+  @media only screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+
+#cities, button, a {
+  font-style: italic;
+}
+
+h3 {
+  font-size: 1.25rem;
+  letter-spacing: 0.3px;
+
+  /* responsive to tablet */
+  @media only screen and (max-width: $tablet) {
+    font-size: 1rem;
+  }
+}
+
+footer {
+  p, a {
+    margin: 0;
+    /* responsive to tablet */
+    @media only screen and (max-width: $tablet) {
+      font-size: 0.9rem;
+    }
+  }
+}
