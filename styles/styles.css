@@ -382,6 +382,7 @@ main {
 @media only screen and (max-width: 970px) {
   #city-selection {
     flex-direction: column;
+    padding-top: 10px;
   }
 }
 
@@ -391,16 +392,37 @@ main {
   font-size: 20px;
   border: 3px solid #282b2c;
   border-radius: 5px;
-  padding: 8px 16px;
+  padding: 5px 15px;
 }
 
 #cities {
   width: 80%;
   max-width: 600px;
+  /* responsive to tablet */
+}
+@media only screen and (max-width: 970px) {
+  #cities {
+    width: 100%;
+  }
+}
+
+.button-container {
+  /* responsive to tablet */
+}
+@media only screen and (max-width: 970px) {
+  .button-container {
+    width: 100%;
+  }
 }
 
 button {
   margin: 5px;
+  /* responsive to tablet */
+}
+@media only screen and (max-width: 970px) {
+  button {
+    min-width: 40%;
+  }
 }
 
 #cities:hover, button:enabled:hover, a:hover {
@@ -437,7 +459,7 @@ select {
 h3 {
   width: 600px;
   margin: 25px auto 0 auto;
-  padding: 8px 15px;
+  padding: 10px 15px;
   background-color: rgba(255, 255, 255, 0.5);
   border: 3px solid #282b2c;
   border-radius: 5px;
@@ -471,7 +493,7 @@ h3.error {
 }
 
 /* responsive to tablet */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 970px) {
   header {
     padding: 30px 20px;
   }
@@ -483,8 +505,8 @@ h3.error {
   h3 {
     position: absolute;
     bottom: 30px;
-    width: calc(100% - 100px);
-    margin: auto 50px;
+    width: 90%;
+    margin: auto 5%;
   }
   .pigeon-image {
     margin: 0 auto;
