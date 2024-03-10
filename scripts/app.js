@@ -143,7 +143,7 @@ let app = {
             app.elements.submit.attr(`disabled`, true);
 
             // set api url
-            app.api.url = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${app.api.key}&sort=relevance&per_page=${app.api.limit}&format=json&dataType=json&nojsoncallback=1`
+            app.api.url = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${app.api.key}&sort=relevance&license=1,2,3,4,5,6,7,8,9,10&per_page=${app.api.limit}&format=json&dataType=json&nojsoncallback=1`
 
             // if randomizing cities
             if (button === `random`){
