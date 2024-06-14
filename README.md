@@ -7,4 +7,5 @@ I originally built this app in July 2022 during my time at Juno College, relaunc
 
 ## Attributions
 - [jQuery v3.7.0](https://jquery.com/)
-- [Josefin Sans typeface](https://fonts.google.com/specimen/Josefin+Sans)
+- [Agiven 3D typeface](https://www.fontspace.com/agiven-3d-font-f117286)
+- [Stint Ultra Expanded typeface](https://fonts.google.com/specimen/Stint+Ultra+Expanded)
