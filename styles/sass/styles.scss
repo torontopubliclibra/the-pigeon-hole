@@ -9,8 +9,9 @@ html {
 }
 
 body {
+    background-color: $color1;
     background-size: 10px 10px;
-    background-image: repeating-linear-gradient(45deg, #7BA0CF 0, #ACCBF4 0, #7BA0CF 0, #ACCBF4 50%);
+    // background-image: repeating-linear-gradient(45deg, #7BA0CF 0, #ACCBF4 0, #7BA0CF 0, #ACCBF4 50%);
     text-align: center;
 }
 
@@ -143,7 +144,6 @@ h3 {
     background-color: $white;
     border: 3px solid $black;
     border-radius: 5px;
-    text-transform: uppercase;
 
     &.error {
         bottom: 20px;
@@ -157,14 +157,14 @@ h3 {
     max-width: 350px;
     min-height: 350px;
     width: 100%;
-    border: 8px solid $black;
+    border: 5px solid $black;
     border-radius: 50%;
     object-fit: cover;
     animation: 1s ease-in fadeInZoomOut;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-    background: rgba($black, 0.8);
+    background: $color2;
 }
 
 .default {
@@ -181,7 +181,7 @@ h3 {
 
     main {
         position: relative;
-        min-height: 500px;
+        min-height: 490px;
         padding-bottom: 0;
     }
 
