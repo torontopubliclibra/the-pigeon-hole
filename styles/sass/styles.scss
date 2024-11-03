@@ -74,7 +74,7 @@ main {
 #cities, button {
     background-color: $white;
     color: $black;
-    font-size: 20px;
+    font-size: 1rem;
     border: 3px solid $black;
     border-radius: 5px;
     padding: 5px 15px;
@@ -154,8 +154,8 @@ h3 {
     opacity: 1;
     display: block;
     aspect-ratio: 1/1;
-    max-width: 350px;
-    min-height: 350px;
+    max-width: 450px;
+    min-height: 450px;
     width: 100%;
     border: 5px solid $black;
     border-radius: 50%;
@@ -181,7 +181,7 @@ h3 {
 
     main {
         position: relative;
-        min-height: 490px;
+        min-height: 440px;
         padding-bottom: 0;
     }
 
@@ -193,6 +193,8 @@ h3 {
     }
 
     .pigeon-image {
+        max-width: 300px;
+        min-height: 300px;
         margin: 0 auto;
     }
 }

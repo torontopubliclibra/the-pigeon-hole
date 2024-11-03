@@ -16,7 +16,7 @@
 }
 
 * {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body, header, footer, button, select, a {
@@ -48,20 +48,20 @@ h1, h2, h3, h4 {
 h1 {
   line-height: 1.25;
   font-family: "Agiven 3D", sans-serif;
-  font-size: 5rem;
+  font-size: 4rem;
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
 
   /* responsive to tablet */
   @media only screen and (max-width: $tablet) {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
 h2 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-style: italic;
 
   /* responsive to tablet */
@@ -87,7 +87,7 @@ h3 {
 
 footer {
   p, a {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     max-width: 1000px;
     margin: 0;
     /* responsive to tablet */
