@@ -241,7 +241,7 @@ html {
   font-display: swap;
 }
 * {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body, header, footer, button, select, a {
@@ -274,7 +274,7 @@ h1, h2, h3, h4 {
 h1 {
   line-height: 1.25;
   font-family: "Agiven 3D", sans-serif;
-  font-size: 5rem;
+  font-size: 4rem;
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
@@ -282,13 +282,13 @@ h1 {
 }
 @media only screen and (max-width: 970px) {
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
 h2 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-style: italic;
   /* responsive to tablet */
 }
@@ -315,7 +315,7 @@ h3 {
 }
 
 footer p, footer a {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   max-width: 1000px;
   margin: 0;
   /* responsive to tablet */
@@ -405,7 +405,7 @@ main {
 #cities, button {
   background-color: #e2eeeb;
   color: #282b2c;
-  font-size: 20px;
+  font-size: 1rem;
   border: 3px solid #282b2c;
   border-radius: 5px;
   padding: 5px 15px;
@@ -488,8 +488,8 @@ h3.error {
   opacity: 1;
   display: block;
   aspect-ratio: 1/1;
-  max-width: 350px;
-  min-height: 350px;
+  max-width: 450px;
+  min-height: 450px;
   width: 100%;
   border: 5px solid #282b2c;
   border-radius: 50%;
@@ -515,7 +515,7 @@ h3.error {
   }
   main {
     position: relative;
-    min-height: 490px;
+    min-height: 440px;
     padding-bottom: 0;
   }
   h3 {
@@ -525,6 +525,8 @@ h3.error {
     margin: auto 5%;
   }
   .pigeon-image {
+    max-width: 300px;
+    min-height: 300px;
     margin: 0 auto;
   }
 }
