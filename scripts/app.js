@@ -34,6 +34,7 @@ let app = {
             `glasgow`,
             `london`,
             `paris`,
+            `lisbon`,
             `berlin`,
             `venice`,
             `rome`,
