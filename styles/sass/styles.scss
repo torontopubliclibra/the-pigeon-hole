@@ -9,14 +9,10 @@ html {
 }
 
 body {
-    background-color: $color1;
+    background-color: $black;
     background-size: 10px 10px;
-    // background-image: repeating-linear-gradient(45deg, #7BA0CF 0, #ACCBF4 0, #7BA0CF 0, #ACCBF4 50%);
+    background: linear-gradient(-125deg, rgba(161,62,149,0.5) 0%, rgba(148,62,161,0.5) 10%, rgba(53,209,172,0.25) 46%, rgba(39,210,158,0.25) 51%, rgba(159,231,228,0.5) 74%, rgba(159,201,231,0.5) 86%);
     text-align: center;
-}
-
-a:hover {
-    color: $color2;
 }
 
 
@@ -25,7 +21,7 @@ header, main, footer {
 }
 
 header, footer {
-    background-color: rgba($white, 0.5);
+    background-color: rgba($white, 0.8);
 }
 
 header {
@@ -112,7 +108,7 @@ button {
 }
 
 button:disabled, #cities:disabled {
-    background-color: rgba($white, 0.5);
+    background-color: rgba(20, 32, 38, 0.15);
 }
 
 select {
@@ -164,7 +160,7 @@ h3 {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-    background: $color2;
+    background: rgba(159,201,231,0.4);
 }
 
 .default {

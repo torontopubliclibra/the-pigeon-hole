@@ -24,13 +24,6 @@ body, header, footer, button, select, a {
   color: $black;
 }
 
-a {
-  /* responsive to tablet */
-  @media only screen and (max-width: $tablet) {
-    color: $color2;
-  }
-}
-
 // default typography
 body, button, input, select {
   font-family: "Stint Ultra Extended", sans-serif;
