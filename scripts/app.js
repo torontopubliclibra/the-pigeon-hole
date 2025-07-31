@@ -136,6 +136,10 @@ let app = {
             }).fail(() => {
                 app.functions.errorPhoto();
             })
+
+            setTimeout(() => {
+                window.scrollTo({top: 0, behavior: "smooth"});
+            }, 100);
         }
     },
     init: () => {
