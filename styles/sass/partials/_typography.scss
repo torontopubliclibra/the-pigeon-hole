@@ -1,14 +1,10 @@
-// import variables
 @use "variables" as *;
 
-// font import
 @font-face {
-  font-family: "Agiven 3D";
-  src: url(/fonts/Agiven3D/Agiven3DDemoRuderight-nALBg.otf) format("truetype");
+  font-family: "Modern DOS";
+  src: url(/fonts/ModernDOS9x16.ttf) format("truetype");
   font-display: swap;
 }
-
-// font import
 @font-face {
   font-family: "Stint Ultra Extended";
   src: url(/fonts/Stint_Ultra_Expanded/StintUltraExpanded-Regular.ttf) format("truetype");
@@ -24,7 +20,6 @@ body, header, footer, button, select, a {
   color: $black;
 }
 
-// default typography
 body, button, input, select {
   font-family: "Stint Ultra Extended", sans-serif;
   font-display: swap;
@@ -39,27 +34,39 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  line-height: 1.25;
-  font-family: "Agiven 3D", sans-serif;
-  font-size: 4rem;
+  font-family: "Modern DOS", monospace;
+  text-transform: uppercase;
+  font-size: 7rem;
+  line-height: 1.5;
+  color: $white;
+  text-shadow: 0 -3px $black, 3px 0 $black, 0 3px $black, -3px 0 $black;
   margin: 0;
-  margin-bottom: 20px;
   padding: 0;
+  margin-bottom: -20px;
 
-  /* responsive to tablet */
   @media only screen and (max-width: $tablet) {
-    font-size: 3rem;
+    font-size: 10vw;
+    margin-bottom: -5vw;
   }
 }
 
 h2 {
   margin: 0;
-  font-size: 1.25rem;
+  margin-bottom: -20px;
+  font-family: "Modern DOS", monospace;
+  font-size: 2rem;
+  font-weight: 400;
   font-style: italic;
+  color: $white;
+  text-shadow: 0 -2px $black, 2px 0 $black, 0 2px $black, -2px 0 $black;
+  max-width: 90%;
+  margin-bottom: -5px;
 
-  /* responsive to tablet */
   @media only screen and (max-width: $tablet) {
-    display: none;
+    font-size: 4vw;
+    line-height: 1.25;
+    margin-top: 20px;
+    margin-bottom: 0;
   }
 }
 
@@ -72,7 +79,6 @@ h3 {
   letter-spacing: 0.3px;
   line-height: 2;
 
-  /* responsive to tablet */
   @media only screen and (max-width: $tablet) {
     font-size: 1rem;
   }
@@ -80,12 +86,16 @@ h3 {
 
 footer {
   p, a {
-    font-size: 0.9rem;
+    font-family: "Modern DOS", monospace;
+    color: $white;
+    text-shadow: 0 -1.5px $black, 1.5px 0 $black, 0 1.5px $black, -1.5px 0 $black;
+    font-size: 1rem;
+    font-weight: 400;
     max-width: 1000px;
     margin: 0;
-    /* responsive to tablet */
+
     @media only screen and (max-width: $tablet) {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
     }
   }
 }

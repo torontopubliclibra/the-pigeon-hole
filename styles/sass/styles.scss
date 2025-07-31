@@ -1,4 +1,3 @@
-// import all partials
 @use 'partials/setup';
 @use 'partials/variables' as *;
 @use 'partials/typography' as *;
@@ -13,15 +12,12 @@ body {
     background-size: 10px 10px;
     background: linear-gradient(-125deg, rgba(161,62,149,0.5) 0%, rgba(148,62,161,0.5) 10%, rgba(53,209,172,0.25) 46%, rgba(39,210,158,0.25) 51%, rgba(159,231,228,0.5) 74%, rgba(159,201,231,0.5) 86%);
     text-align: center;
+    min-width: 375px;
 }
-
 
 header, main, footer {
+    background-color: rgba($black, 0.75);
     margin: 0;
-}
-
-header, footer {
-    background-color: rgba($white, 0.8);
 }
 
 header {
@@ -29,9 +25,8 @@ header {
     flex-flow: column;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 4px solid $black;
-    padding: 25px 50px;
-    padding-top: 15px;
+    padding: 20px 40px;
+    padding-top: 10px;
 }
 
 footer {
@@ -40,54 +35,77 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border-top: 4px solid $black;
-    padding: 25px;
+    padding: 20px;
+    padding-bottom: 40px;
 }
 
 main {
-    background-color: rgba($black, 0.5);
     width: 100%;
     height: 100%;
-    padding: 30px 0;
+    padding: 20px 0;
+    padding-top: 15px;
 }
 
 #city-selection {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
     width: 100%;
     gap: 15px;
     text-align: center;
 
-    /* responsive to tablet */
     @media only screen and (max-width: $tablet) {
         flex-direction: column;
-        padding-top: 10px;
     }
 }
 
 #cities, button {
-    background-color: $white;
     color: $black;
     font-size: 1rem;
-    border: 3px solid $black;
+}
+
+button {
+    background-color: $white;
+    border: 2px solid $black;
     border-radius: 5px;
     padding: 5px 15px;
+    transition: background-color 0.5s;
+
+    &:hover {
+        background-color: rgba(161,62,149,0.4);
+        color: $white;
+    }
+
+    &.selected, &.selected:hover {
+        background-color: rgba($color1, 0.2);
+        color: $white;
+        transition: background-color 1s;
+    }
+
+    @media only screen and (max-width: $tablet) {
+        font-size: 0.9rem;
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+    }
 }
 
 #cities {
-    width: 80%;
-    max-width: 600px;
+    width: 95%;
+    margin-top: 25px;
 
-    /* responsive to tablet */
+    p {
+        color: $white;
+    }
+
     @media only screen and (max-width: $tablet) {
         width: 100%;
     }
 }
 
 .button-container {
-    /* responsive to tablet */
     @media only screen and (max-width: $tablet) {
         width: 100%;
     }
@@ -96,7 +114,6 @@ main {
 button {
     margin: 5px;
 
-    /* responsive to tablet */
     @media only screen and (max-width: $tablet) {
         min-width: 40%;
     }
@@ -135,10 +152,10 @@ select {
 
 h3 {
     width: 600px;
-    margin: 25px auto 0 auto;
+    margin: 40px auto 0 auto;
     padding: 5px 15px;
     background-color: $white;
-    border: 3px solid $black;
+    border: 2px solid $black;
     border-radius: 5px;
 
     &.error {
@@ -150,17 +167,19 @@ h3 {
     opacity: 1;
     display: block;
     aspect-ratio: 1/1;
-    max-width: 450px;
-    min-height: 450px;
+    max-width: 400px;
+    min-height: 400px;
     width: 100%;
-    border: 5px solid $black;
+    margin: 20px 0;
+    margin-bottom: 30px;
+    border: 2px solid $black;
     border-radius: 50%;
     object-fit: cover;
     animation: 1s ease-in fadeInZoomOut;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-    background: rgba(159,201,231,0.4);
+    background: rgba($color1, 0.4);
 }
 
 .default {
@@ -192,5 +211,6 @@ h3 {
         max-width: 300px;
         min-height: 300px;
         margin: 0 auto;
+        margin-top: -20px;
     }
 }

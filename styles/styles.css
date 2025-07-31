@@ -224,15 +224,14 @@ html {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
 @font-face {
-  font-family: "Agiven 3D";
-  src: url(/fonts/Agiven3D/Agiven3DDemoRuderight-nALBg.otf) format("truetype");
+  font-family: "Modern DOS";
+  src: url(/fonts/ModernDOS9x16.ttf) format("truetype");
   font-display: swap;
 }
 @font-face {
@@ -263,29 +262,41 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  line-height: 1.25;
-  font-family: "Agiven 3D", sans-serif;
-  font-size: 4rem;
+  font-family: "Modern DOS", monospace;
+  text-transform: uppercase;
+  font-size: 7rem;
+  line-height: 1.5;
+  color: #ede2ee;
+  text-shadow: 0 -3px #282b2c, 3px 0 #282b2c, 0 3px #282b2c, -3px 0 #282b2c;
   margin: 0;
-  margin-bottom: 20px;
   padding: 0;
-  /* responsive to tablet */
+  margin-bottom: -20px;
 }
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 1080px) {
   h1 {
-    font-size: 3rem;
+    font-size: 10vw;
+    margin-bottom: -5vw;
   }
 }
 
 h2 {
   margin: 0;
-  font-size: 1.25rem;
+  margin-bottom: -20px;
+  font-family: "Modern DOS", monospace;
+  font-size: 2rem;
+  font-weight: 400;
   font-style: italic;
-  /* responsive to tablet */
+  color: #ede2ee;
+  text-shadow: 0 -2px #282b2c, 2px 0 #282b2c, 0 2px #282b2c, -2px 0 #282b2c;
+  max-width: 90%;
+  margin-bottom: -5px;
 }
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 1080px) {
   h2 {
-    display: none;
+    font-size: 4vw;
+    line-height: 1.25;
+    margin-top: 20px;
+    margin-bottom: 0;
   }
 }
 
@@ -297,23 +308,25 @@ h3 {
   font-size: 1.25rem;
   letter-spacing: 0.3px;
   line-height: 2;
-  /* responsive to tablet */
 }
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 1080px) {
   h3 {
     font-size: 1rem;
   }
 }
 
 footer p, footer a {
-  font-size: 0.9rem;
+  font-family: "Modern DOS", monospace;
+  color: #ede2ee;
+  text-shadow: 0 -1.5px #282b2c, 1.5px 0 #282b2c, 0 1.5px #282b2c, -1.5px 0 #282b2c;
+  font-size: 1rem;
+  font-weight: 400;
   max-width: 1000px;
   margin: 0;
-  /* responsive to tablet */
 }
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 1080px) {
   footer p, footer a {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -336,14 +349,12 @@ body {
   background-size: 10px 10px;
   background: linear-gradient(-125deg, rgba(161, 62, 149, 0.5) 0%, rgba(148, 62, 161, 0.5) 10%, rgba(53, 209, 172, 0.25) 46%, rgba(39, 210, 158, 0.25) 51%, rgba(159, 231, 228, 0.5) 74%, rgba(159, 201, 231, 0.5) 86%);
   text-align: center;
+  min-width: 375px;
 }
 
 header, main, footer {
+  background-color: rgba(40, 43, 44, 0.75);
   margin: 0;
-}
-
-header, footer {
-  background-color: rgba(237, 226, 238, 0.8);
 }
 
 header {
@@ -351,9 +362,8 @@ header {
   flex-flow: column;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 4px solid #282b2c;
-  padding: 25px 50px;
-  padding-top: 15px;
+  padding: 20px 40px;
+  padding-top: 10px;
 }
 
 footer {
@@ -362,58 +372,76 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-top: 4px solid #282b2c;
-  padding: 25px;
+  padding: 20px;
+  padding-bottom: 40px;
 }
 
 main {
-  background-color: rgba(40, 43, 44, 0.5);
   width: 100%;
   height: 100%;
-  padding: 30px 0;
+  padding: 20px 0;
+  padding-top: 15px;
 }
 
 #city-selection {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
   width: 100%;
   gap: 15px;
   text-align: center;
-  /* responsive to tablet */
 }
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 1080px) {
   #city-selection {
     flex-direction: column;
-    padding-top: 10px;
   }
 }
 
 #cities, button {
-  background-color: #ede2ee;
   color: #282b2c;
   font-size: 1rem;
-  border: 3px solid #282b2c;
+}
+
+button {
+  background-color: #ede2ee;
+  border: 2px solid #282b2c;
   border-radius: 5px;
   padding: 5px 15px;
+  transition: background-color 0.5s;
+}
+button:hover {
+  background-color: rgba(161, 62, 149, 0.4);
+  color: #ede2ee;
+}
+button.selected, button.selected:hover {
+  background-color: rgba(159, 201, 231, 0.2);
+  color: #ede2ee;
+  transition: background-color 1s;
+}
+@media only screen and (max-width: 1080px) {
+  button {
+    font-size: 0.9rem;
+  }
+  button:hover {
+    background-color: #ede2ee;
+    color: #282b2c;
+  }
 }
 
 #cities {
-  width: 80%;
-  max-width: 600px;
-  /* responsive to tablet */
+  width: 95%;
+  margin-top: 25px;
 }
-@media only screen and (max-width: 970px) {
+#cities p {
+  color: #ede2ee;
+}
+@media only screen and (max-width: 1080px) {
   #cities {
     width: 100%;
   }
 }
 
-.button-container {
-  /* responsive to tablet */
-}
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 1080px) {
   .button-container {
     width: 100%;
   }
@@ -421,9 +449,8 @@ main {
 
 button {
   margin: 5px;
-  /* responsive to tablet */
 }
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 1080px) {
   button {
     min-width: 40%;
   }
@@ -462,10 +489,10 @@ select {
 
 h3 {
   width: 600px;
-  margin: 25px auto 0 auto;
+  margin: 40px auto 0 auto;
   padding: 5px 15px;
   background-color: #ede2ee;
-  border: 3px solid #282b2c;
+  border: 2px solid #282b2c;
   border-radius: 5px;
 }
 h3.error {
@@ -476,10 +503,12 @@ h3.error {
   opacity: 1;
   display: block;
   aspect-ratio: 1/1;
-  max-width: 450px;
-  min-height: 450px;
+  max-width: 400px;
+  min-height: 400px;
   width: 100%;
-  border: 5px solid #282b2c;
+  margin: 20px 0;
+  margin-bottom: 30px;
+  border: 2px solid #282b2c;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -496,7 +525,7 @@ h3.error {
 }
 
 /* responsive to tablet */
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 1080px) {
   header {
     padding: 30px 20px;
     padding-top: 10px;
@@ -516,5 +545,6 @@ h3.error {
     max-width: 300px;
     min-height: 300px;
     margin: 0 auto;
+    margin-top: -20px;
   }
 }
