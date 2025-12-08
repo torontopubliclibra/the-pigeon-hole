@@ -379,7 +379,8 @@ footer {
 }
 @media only screen and (max-width: 768px) {
   footer {
-    padding: 40px 20px;
+    padding: 20px;
+    padding-bottom: 30px;
   }
 }
 
@@ -413,7 +414,7 @@ button {
   background-color: #ede2ee;
   border: 2px solid #282b2c;
   border-radius: 50px;
-  padding: 5px 25px;
+  padding: 5px 15px;
   transition: background-color 0.5s;
 }
 button:hover {
