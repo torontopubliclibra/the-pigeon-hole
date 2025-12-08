@@ -73,7 +73,6 @@ let app = {
             `marrakech`,
             `lagos`,
             `cairo`,
-            `tunis`,
             `dakar`,
 
             // Australasia
