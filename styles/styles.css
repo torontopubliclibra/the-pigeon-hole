@@ -266,7 +266,7 @@ h1, h2, h3, h4 {
 h1 {
   font-family: "Boldonse", sans-serif;
   text-transform: uppercase;
-  font-size: 5rem;
+  font-size: 4.5rem;
   line-height: 1.5;
   color: #ede2ee;
   text-shadow: 0 -3px #282b2c, 3px 0 #282b2c, 0 3px #282b2c, -3px 0 #282b2c;
@@ -284,7 +284,7 @@ h2 {
   margin: 0;
   margin-bottom: -20px;
   font-family: "Stint Ultra Extended", sans-serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 400;
   font-style: italic;
   color: #ede2ee;
@@ -294,7 +294,7 @@ h2 {
 }
 @media only screen and (max-width: 1080px) {
   h2 {
-    font-size: 3.75vw;
+    font-size: 6vw;
     line-height: 1.25;
     margin-top: 20px;
     margin-bottom: 0;
@@ -527,7 +527,7 @@ h3.error {
      object-fit: contain;
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 768px) {
   header {
     padding: 30px 20px;
     padding-top: 10px;
