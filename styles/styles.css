@@ -468,7 +468,6 @@ button {
 
 #cities:hover, button:enabled:hover, a:hover {
   cursor: pointer;
-  font-style: italic;
 }
 
 button:disabled, #cities:disabled {
