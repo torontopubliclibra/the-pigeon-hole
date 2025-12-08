@@ -16,25 +16,72 @@ let app = {
 
     data: {
         cities: [
+            // Canada
             `toronto`,
             `halifax`,
+            `vancouver`,
+            `montreal`,
+            `calgary`,
+            `ottawa`,
+            `edmonton`,
+            `winnipeg`,
+
+            // America (USA, Mexico, Brazil)
             `new york city`,
             `chicago`,
             `boston`,
-            `vancouver`,
             `seattle`,
+            `washington dc`,
+            `los angeles`,
             `san francisco`,
+            `mexico city`,
+            `rio de janeiro`,
+            `buenos aires`,
+
+            // Europe
             `stockholm`,
             `glasgow`,
             `london`,
+            `dublin`,
+            `edinburgh`,
+            `copenhagen`,
+            `oslo`,
+            `helsinki`,
             `paris`,
             `lisbon`,
             `berlin`,
+            `barcelona`,
+            `prague`,
+            `budapest`,
+            `vienna`,
+            `istanbul`,
             `venice`,
             `rome`,
             `amsterdam`,
+            `brussels`,
+
+            // Asia
+            `mumbai`,
+            `tokyo`,
+            `seoul`,
+            `hong kong`,
+            `singapore`,
+            `dubai`,
+
+            // Africa
+            `cape town`,
+            `marrakech`,
+            `lagos`,
+            `cairo`,
+            `tunis`,
+            `dakar`,
+
+            // Australasia
             `melbourne`,
-            `mumbai`
+            `sydney`,
+            `auckland`,
+            `brisbane`,
+            `perth`,
         ],
         selection: '',
         photos: [],
@@ -75,6 +122,8 @@ let app = {
 
             app.data.photo = randomPhoto;
 
+            console.log(app.data.photo);
+
             let photoData = {
                 url: `https://live.staticflickr.com/${app.data.photo.server}/${app.data.photo.id}_${app.data.photo.secret}.jpg`,
                 link: `https://www.flickr.com/photos/${app.data.photo.owner}/${app.data.photo.id}/`,
@@ -84,7 +133,7 @@ let app = {
             let photoHTML = `
             <div class="image-container">
                 <a href="${photoData.link}" target="_blank">
-                    <img src="${photoData.url}" alt="${photoData.title}" title="${photoData.title}" class="pigeon-image">
+                    <img src="${photoData.url}" alt="${photoData.title}" class="pigeon-image">
                 </a>
             </div>`;
 

@@ -230,21 +230,20 @@ html {
 }
 
 @font-face {
-  font-family: "Modern DOS";
-  src: url(/fonts/ModernDOS9x16.ttf) format("truetype");
+  font-family: "Boldonse";
+  src: url(/fonts/Boldonse/Boldonse-Regular.ttf) format("truetype");
   font-display: swap;
 }
 @font-face {
   font-family: "Stint Ultra Extended";
-  src: url(/fonts/Stint_Ultra_Expanded/StintUltraExpanded-Regular.ttf) format("truetype");
+  src: url(/fonts/Oranienbaum/Oranienbaum-Regular.ttf) format("truetype");
   font-display: swap;
 }
 * {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 body, header, footer, button, select, a {
-  text-transform: lowercase;
   color: #282b2c;
 }
 
@@ -253,8 +252,11 @@ body, button, input, select {
   font-display: swap;
   font-weight: 800;
   line-height: 1.6;
-  text-transform: lowercase;
   text-decoration: none;
+}
+
+button {
+  text-transform: uppercase;
 }
 
 h1, h2, h3, h4 {
@@ -262,45 +264,44 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-family: "Modern DOS", monospace;
+  font-family: "Boldonse", sans-serif;
   text-transform: uppercase;
-  font-size: 7rem;
+  font-size: 5rem;
   line-height: 1.5;
   color: #ede2ee;
   text-shadow: 0 -3px #282b2c, 3px 0 #282b2c, 0 3px #282b2c, -3px 0 #282b2c;
-  margin: 0;
+  margin: 20px 0;
   padding: 0;
-  margin-bottom: -20px;
 }
 @media only screen and (max-width: 1080px) {
   h1 {
-    font-size: 10vw;
-    margin-bottom: -5vw;
+    font-size: 8vw;
+    margin-bottom: 0;
   }
 }
 
 h2 {
   margin: 0;
   margin-bottom: -20px;
-  font-family: "Modern DOS", monospace;
+  font-family: "Stint Ultra Extended", sans-serif;
   font-size: 2rem;
   font-weight: 400;
   font-style: italic;
   color: #ede2ee;
-  text-shadow: 0 -2px #282b2c, 2px 0 #282b2c, 0 2px #282b2c, -2px 0 #282b2c;
+  text-shadow: 0 -3px #282b2c, 3px 0 #282b2c, 0 3px #282b2c, -3px 0 #282b2c;
   max-width: 90%;
   margin-bottom: -5px;
 }
 @media only screen and (max-width: 1080px) {
   h2 {
-    font-size: 4vw;
+    font-size: 3.75vw;
     line-height: 1.25;
     margin-top: 20px;
     margin-bottom: 0;
   }
 }
 
-#cities, button, a {
+#cities {
   font-style: italic;
 }
 
@@ -316,13 +317,14 @@ h3 {
 }
 
 footer p, footer a {
-  font-family: "Modern DOS", monospace;
+  font-family: "Stint Ultra Extended", sans-serif;
   color: #ede2ee;
-  text-shadow: 0 -1.5px #282b2c, 1.5px 0 #282b2c, 0 1.5px #282b2c, -1.5px 0 #282b2c;
-  font-size: 1rem;
+  text-shadow: 0 -2px #282b2c, 2px 0 #282b2c, 0 2px #282b2c, -2px 0 #282b2c;
+  font-size: 0.8rem;
   font-weight: 400;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0;
+  text-wrap: balance;
 }
 @media only screen and (max-width: 1080px) {
   footer p, footer a {
@@ -405,8 +407,8 @@ main {
 button {
   background-color: #ede2ee;
   border: 2px solid #282b2c;
-  border-radius: 5px;
-  padding: 5px 15px;
+  border-radius: 50px;
+  padding: 5px 25px;
   transition: background-color 0.5s;
 }
 button:hover {
@@ -430,6 +432,7 @@ button.selected, button.selected:hover {
 
 #cities {
   width: 95%;
+  max-width: 1500px;
   margin-top: 20px;
 }
 #cities p {
@@ -508,7 +511,7 @@ h3.error {
   width: 100%;
   margin: 20px 0;
   margin-bottom: 30px;
-  border: 4px solid #282b2c;
+  border: 3px solid #282b2c;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;

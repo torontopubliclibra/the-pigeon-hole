@@ -1,22 +1,21 @@
 @use "variables" as *;
 
 @font-face {
-  font-family: "Modern DOS";
-  src: url(/fonts/ModernDOS9x16.ttf) format("truetype");
+  font-family: "Boldonse";
+  src: url(/fonts/Boldonse/Boldonse-Regular.ttf) format("truetype");
   font-display: swap;
 }
 @font-face {
   font-family: "Stint Ultra Extended";
-  src: url(/fonts/Stint_Ultra_Expanded/StintUltraExpanded-Regular.ttf) format("truetype");
+  src: url(/fonts/Oranienbaum/Oranienbaum-Regular.ttf) format("truetype");
   font-display: swap;
 }
 
 * {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 body, header, footer, button, select, a {
-  text-transform: lowercase;
   color: $black;
 }
 
@@ -25,8 +24,11 @@ body, button, input, select {
   font-display: swap;
   font-weight: 800;
   line-height: 1.6;
-  text-transform: lowercase;
   text-decoration: none;
+}
+
+button {
+  text-transform: uppercase;
 }
 
 h1, h2, h3, h4 {
@@ -34,43 +36,42 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-family: "Modern DOS", monospace;
+  font-family: "Boldonse", sans-serif;
   text-transform: uppercase;
-  font-size: 7rem;
+  font-size: 5rem;
   line-height: 1.5;
   color: $white;
   text-shadow: 0 -3px $black, 3px 0 $black, 0 3px $black, -3px 0 $black;
-  margin: 0;
+  margin: 20px 0;
   padding: 0;
-  margin-bottom: -20px;
 
   @media only screen and (max-width: $tablet) {
-    font-size: 10vw;
-    margin-bottom: -5vw;
+    font-size: 8vw;
+    margin-bottom: 0;
   }
 }
 
 h2 {
   margin: 0;
   margin-bottom: -20px;
-  font-family: "Modern DOS", monospace;
+  font-family: "Stint Ultra Extended", sans-serif;
   font-size: 2rem;
   font-weight: 400;
   font-style: italic;
   color: $white;
-  text-shadow: 0 -2px $black, 2px 0 $black, 0 2px $black, -2px 0 $black;
+  text-shadow: 0 -3px $black, 3px 0 $black, 0 3px $black, -3px 0 $black;
   max-width: 90%;
   margin-bottom: -5px;
 
   @media only screen and (max-width: $tablet) {
-    font-size: 4vw;
+    font-size: 3.75vw;
     line-height: 1.25;
     margin-top: 20px;
     margin-bottom: 0;
   }
 }
 
-#cities, button, a {
+#cities {
   font-style: italic;
 }
 
@@ -86,13 +87,14 @@ h3 {
 
 footer {
   p, a {
-    font-family: "Modern DOS", monospace;
+    font-family: "Stint Ultra Extended", sans-serif;
     color: $white;
-    text-shadow: 0 -1.5px $black, 1.5px 0 $black, 0 1.5px $black, -1.5px 0 $black;
-    font-size: 1rem;
+    text-shadow: 0 -2px $black, 2px 0 $black, 0 2px $black, -2px 0 $black;
+    font-size: 0.8rem;
     font-weight: 400;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0;
+    text-wrap: balance;
 
     @media only screen and (max-width: $tablet) {
       font-size: 0.8rem;
