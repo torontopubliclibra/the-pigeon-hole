@@ -41,7 +41,6 @@ h1 {
   font-size: 4.5rem;
   line-height: 1.5;
   color: $white;
-  text-shadow: 0 -3px $black, 3px 0 $black, 0 3px $black, -3px 0 $black;
   margin: 20px 0;
   padding: 0;
 
@@ -59,8 +58,8 @@ h2 {
   font-weight: 400;
   font-style: italic;
   color: $white;
-  text-shadow: 0 -3px $black, 3px 0 $black, 0 3px $black, -3px 0 $black;
   max-width: 90%;
+  cursor: default;
   margin-bottom: -5px;
 
   @media only screen and (max-width: $tablet) {
@@ -89,7 +88,6 @@ footer {
   p, a {
     font-family: "Stint Ultra Extended", sans-serif;
     color: $white;
-    text-shadow: 0 -2px $black, 2px 0 $black, 0 2px $black, -2px 0 $black;
     font-size: 0.8rem;
     font-weight: 400;
     max-width: 1200px;
