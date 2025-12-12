@@ -16,7 +16,6 @@ let app = {
 
     data: {
         cities: [
-            // Canada
             `toronto`,
             `halifax`,
             `vancouver`,
@@ -24,8 +23,6 @@ let app = {
             `calgary`,
             `ottawa`,
             `winnipeg`,
-
-            // America (USA, Mexico, Brazil)
             `new york city`,
             `chicago`,
             `boston`,
@@ -36,50 +33,35 @@ let app = {
             `mexico city`,
             `rio de janeiro`,
             `buenos aires`,
-
-            // Europe
-            `stockholm`,
-            `glasgow`,
             `london`,
             `dublin`,
             `edinburgh`,
-            `copenhagen`,
             `oslo`,
-            `helsinki`,
             `paris`,
             `lisbon`,
             `berlin`,
             `barcelona`,
             `prague`,
-            `budapest`,
             `vienna`,
-            `istanbul`,
             `venice`,
             `rome`,
             `amsterdam`,
-            `brussels`,
-
-            // Asia
             `mumbai`,
             `tokyo`,
+            `beirut`,
+            `bangkok`,
+            `manila`,
+            `jakarta`,
+            `delhi`,
             `seoul`,
             `hong kong`,
             `singapore`,
-            `dubai`,
-
-            // Africa
-            `cape town`,
-            `marrakech`,
-            `lagos`,
+            `kuala lumpur`,
+            `shanghai`,
+            `istanbul`,
             `cairo`,
-            `dakar`,
-
-            // Australasia
             `melbourne`,
             `sydney`,
-            `auckland`,
-            `brisbane`,
-            `perth`,
         ],
         selection: '',
         photos: [],
