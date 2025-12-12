@@ -1,6 +1,6 @@
 .loader-spinner {
-  border: 205px solid #222222;
-  border-top: 205px solid #222222cc;
+  border: 305px solid #222222;
+  border-top: 305px solid #222222cc;
   border-radius: 50%;
   width: 150px;
   height: 150px;
@@ -295,6 +295,7 @@ h1, h2, h3, h4 {
 
 h1 {
   font-family: "Boldonse", sans-serif;
+    transform: perspective(400px) rotateX(12deg);
   text-transform: uppercase;
   font-size: 4.5rem;
   line-height: 1.5;
@@ -543,8 +544,8 @@ h3.error {
   opacity: 1;
   display: block;
   aspect-ratio: 1/1;
-  max-width: 400px;
-  min-height: 400px;
+  max-width: 600px;
+  min-height: 600px;
   width: 100%;
   margin: 20px 0;
   margin-bottom: 30px;
