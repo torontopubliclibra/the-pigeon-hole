@@ -564,7 +564,7 @@ h3.error {
   -o-object-fit: contain;
      object-fit: contain;
   background: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
   filter: invert(1) brightness(0.9);
 }
 
