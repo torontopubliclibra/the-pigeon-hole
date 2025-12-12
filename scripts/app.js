@@ -51,7 +51,6 @@ let app = {
             `beirut`,
             `bangkok`,
             `manila`,
-            `jakarta`,
             `delhi`,
             `seoul`,
             `hong kong`,
