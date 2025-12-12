@@ -23,7 +23,6 @@ let app = {
             `montreal`,
             `calgary`,
             `ottawa`,
-            `edmonton`,
             `winnipeg`,
 
             // America (USA, Mexico, Brazil)
@@ -114,62 +113,60 @@ let app = {
         },
 
         displayPhoto: (photos) => {
-
             let randomPhoto = app.functions.randomFromArray(photos);
-
-            while (randomPhoto === app.data.photo) {randomPhoto = app.functions.randomFromArray(photos)};
-
+            while (randomPhoto === app.data.photo) { randomPhoto = app.functions.randomFromArray(photos); }
             app.data.photo = randomPhoto;
-
-            console.log(app.data.photo);
-
             let photoData = {
                 url: `https://live.staticflickr.com/${app.data.photo.server}/${app.data.photo.id}_${app.data.photo.secret}.jpg`,
                 link: `https://www.flickr.com/photos/${app.data.photo.owner}/${app.data.photo.id}/`,
                 title: `${app.data.selection} pigeon`,
             }
-
             let photoHTML = `
-            <div class="image-container">
+            <div class="image-container" style="position:relative;">
                 <a href="${photoData.link}" target="_blank">
                     <img src="${photoData.url}" alt="${photoData.title}" class="pigeon-image">
+                    <div class="loader-overlay">
+                        <div class="loader-spinner"></div>
+                    </div>
                 </a>
             </div>`;
-
+            // Insert image, then hide loader overlay
             setTimeout(() => {
                 app.elements.imageResults.html(photoHTML);
-            }, 100)
+                app.functions.hideLoader();
+            }, 100);
         },
 
         errorPhoto: () => {
-
             let photoHTML = `
-                <div id="image-results">
-                    <div class="image-container">
-                        <img src="assets/pigeon-default.svg" alt="A silhouette of a pigeon" class="pigeon-image default">
+                <div class="image-container" style="position:relative;">
+                    <img src="assets/pigeon-default.svg" alt="A silhouette of a pigeon" class="pigeon-image default">
+                    <div class="loader-overlay">
+                        <div class="loader-spinner"></div>
                     </div>
                 </div>
             `;
-
             app.elements.imageResults.html(photoHTML);
+            app.functions.hideLoader();
         },
 
         apiCall: (button) => {
-            app.api.url = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${app.api.key}&sort=relevance&per_page=${app.api.limit}&format=json&dataType=json&nojsoncallback=1`
+            app.api.url = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${app.api.key}&sort=relevance&per_page=${app.api.limit}&format=json&dataType=json&nojsoncallback=1`;
 
-            if (button === `random`){
+            // Show loader overlay only over .pigeon-image
+            app.functions.showLoader();
+
+            if (button === `random`) {
                 let randomCity = app.functions.randomFromArray(app.data.cities);
-
                 while (randomCity === app.data.selection) {
                     randomCity = app.functions.randomFromArray(app.data.cities);
                 }
-
                 app.data.selection = randomCity;
                 $(`#cities button`).removeClass(`selected`);
                 $(`button#${randomCity.replace(/\s/g, "")}`).addClass(`selected`);
             }
 
-            app.api.query = {text: `pigeon ${app.data.selection}`};
+            app.api.query = { text: `pigeon ${app.data.selection}` };
 
             $.ajax({
                 url: app.api.url,
@@ -183,12 +180,26 @@ let app = {
                 }
             }).fail(() => {
                 app.functions.errorPhoto();
-            })
+            });
 
             setTimeout(() => {
-                window.scrollTo({top: 0, behavior: "smooth"});
-            }, 100);
-        }
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }, 150);
+        },
+
+        showLoader: () => {
+            // Only show loader overlay over the .pigeon-image in .image-container
+            const $img = $(".image-container .pigeon-image");
+            if ($img.length) {
+                const $container = $img.closest('.image-container');
+                const $overlay = $container.find('.loader-overlay');
+                $overlay.css('display', 'flex');
+            }
+        },
+        hideLoader: () => {
+            // Hide all loader overlays
+            $(".image-container .loader-overlay").css('display', 'none');
+        },
     },
     init: () => {
         app.data.selection = ``;

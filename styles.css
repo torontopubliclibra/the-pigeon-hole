@@ -1,3 +1,29 @@
+.loader-spinner {
+  border: 205px solid #222222;
+  border-top: 205px solid #222222cc;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: spin 2s linear infinite;
+  z-index: 11;
+}
+
+.loader-overlay {
+  display:none;
+  position:absolute;
+  top:-5px;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:10;
+  align-items:center;
+  justify-content:center;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -39,6 +65,10 @@ pre {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+}
+
+a.title {
+  text-decoration: none;
 }
 
 abbr[title] {
@@ -278,22 +308,27 @@ h1 {
     margin-bottom: 0;
   }
 }
-
 h2 {
   margin: 0;
   margin-bottom: -20px;
-  font-family: "Stint Ultra Extended", sans-serif;
-  font-size: 1.75rem;
-  font-weight: 400;
+  font-family: "Stint Ultra Extended", "Boldonse", serif;
+  font-size: 2.5rem;
+  font-weight: 800;
   font-style: italic;
   color: #ede2ee;
   max-width: 90%;
   cursor: default;
   margin-bottom: -5px;
+  letter-spacing: 0.08em;
+  display: inline-block;
+  transform: perspective(400px) rotateX(12deg);
+  padding: 0 10px;
+  background: none;
+  filter: brightness(1.1) contrast(1.1);
 }
 @media only screen and (max-width: 1080px) {
   h2 {
-    font-size: 6vw;
+    font-size: 5.5vw;
     line-height: 1.25;
     margin-top: 20px;
     margin-bottom: 0;
@@ -318,7 +353,7 @@ h3 {
 footer p, footer a {
   font-family: "Stint Ultra Extended", sans-serif;
   color: #ede2ee;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
   max-width: 1200px;
   margin: 0;
@@ -410,7 +445,6 @@ main {
 
 button {
   background-color: #ede2ee;
-  border: 2px solid #282b2c;
   border-radius: 50px;
   padding: 5px 15px;
   transition: background-color 0.5s;
@@ -499,7 +533,6 @@ h3 {
   margin: 40px auto 0 auto;
   padding: 5px 15px;
   background-color: #ede2ee;
-  border: 2px solid #282b2c;
   border-radius: 5px;
 }
 h3.error {
@@ -515,7 +548,6 @@ h3.error {
   width: 100%;
   margin: 20px 0;
   margin-bottom: 30px;
-  border: 3px solid #282b2c;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -524,6 +556,7 @@ h3.error {
   white-space: nowrap;
   overflow: hidden;
   background: rgba(159, 201, 231, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .default {
@@ -552,5 +585,14 @@ h3.error {
     min-height: 300px;
     margin: 0 auto;
     margin-top: -20px;
+  }
+  .loader-overlay {
+    top: -9px;
+  }
+  .loader-spinner {
+    border: 155px solid #222222;
+    border-top: 155px solid #222222cc;
+    width: 100px;
+    height: 100px;
   }
 }
