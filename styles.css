@@ -295,7 +295,7 @@ h1, h2, h3, h4 {
 
 h1 {
   font-family: "Boldonse", sans-serif;
-    transform: perspective(400px) rotateX(12deg);
+  transform: perspective(400px) rotateX(12deg);
   text-transform: uppercase;
   font-size: 4.5rem;
   line-height: 1.5;

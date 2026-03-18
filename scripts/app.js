@@ -1,19 +1,16 @@
 let app = {
-
     api: {
         key: `ba29e2524c03fb467cf6af47fca859df`,
         url: ``,
         query: ``,
         limit: 25,
     },
-
     elements: {
         cities: $(`#cities`),
         imageResults: $(`#image-results`),
         submit: $(`#submit`),
         random: $(`#random`)
     },
-
     data: {
         cities: [
             `toronto`,
@@ -48,7 +45,6 @@ let app = {
             `amsterdam`,
             `mumbai`,
             `tokyo`,
-            `beirut`,
             `bangkok`,
             `manila`,
             `delhi`,
@@ -66,33 +62,26 @@ let app = {
         photos: [],
         photo: {},
     },
-
     functions: {
-
         randomFromArray: (array) => {
             let x = Math.floor(Math.random() * array.length);
             return array[x];
         },
-        
         cities: () => {
-
             let cityOptions = [``]
             app.data.cities.forEach((city) => {
                 cityOptions.push(`<button onClick="app.functions.selectCity('${city}')" id="${city.replace(/\s/g, "")}">${city}</button>`)
             })
-
             cityOptions.push(`<button onClick="app.functions.apiCall('random')" id="random">Random city</button>`)
 
             app.elements.cities.html(cityOptions.reduce((accumulator, option) => {return accumulator + option}));
         },
-
         selectCity: (city) => {
             app.data.selection = city;
             app.functions.apiCall(`submit`);
             $(`#cities button`).removeClass(`selected`);
             $(`button#${city.replace(/\s/g, "")}`).addClass(`selected`);
         },
-
         displayPhoto: (photos) => {
             let randomPhoto = app.functions.randomFromArray(photos);
             while (randomPhoto === app.data.photo) { randomPhoto = app.functions.randomFromArray(photos); }
@@ -111,13 +100,11 @@ let app = {
                     </div>
                 </a>
             </div>`;
-            // Insert image, then hide loader overlay
             setTimeout(() => {
                 app.elements.imageResults.html(photoHTML);
                 app.functions.hideLoader();
             }, 100);
         },
-
         errorPhoto: () => {
             let photoHTML = `
                 <div class="image-container" style="position:relative;">
@@ -130,13 +117,9 @@ let app = {
             app.elements.imageResults.html(photoHTML);
             app.functions.hideLoader();
         },
-
         apiCall: (button) => {
             app.api.url = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${app.api.key}&sort=relevance&per_page=${app.api.limit}&format=json&dataType=json&nojsoncallback=1`;
-
-            // Show loader overlay only over .pigeon-image
             app.functions.showLoader();
-
             if (button === `random`) {
                 let randomCity = app.functions.randomFromArray(app.data.cities);
                 while (randomCity === app.data.selection) {
@@ -146,9 +129,7 @@ let app = {
                 $(`#cities button`).removeClass(`selected`);
                 $(`button#${randomCity.replace(/\s/g, "")}`).addClass(`selected`);
             }
-
             app.api.query = { text: `pigeon ${app.data.selection}` };
-
             $.ajax({
                 url: app.api.url,
                 data: app.api.query
@@ -167,9 +148,7 @@ let app = {
                 window.scrollTo({ top: 0, behavior: "smooth" });
             }, 150);
         },
-
         showLoader: () => {
-            // Only show loader overlay over the .pigeon-image in .image-container
             const $img = $(".image-container .pigeon-image");
             if ($img.length) {
                 const $container = $img.closest('.image-container');
@@ -178,7 +157,6 @@ let app = {
             }
         },
         hideLoader: () => {
-            // Hide all loader overlays
             $(".image-container .loader-overlay").css('display', 'none');
         },
     },
@@ -187,7 +165,6 @@ let app = {
         app.functions.cities();
     }
 }
-
 $(document).ready(function () {
     app.init();
 });
